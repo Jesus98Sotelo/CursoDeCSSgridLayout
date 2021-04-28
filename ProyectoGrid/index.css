@@ -1,6 +1,6 @@
 :root {
     --primaryText: #212121;
-    --secondaryText: #757575;
+    --secondaryText: #FBEAFF;
     --darkPrimaryColor: #388e3c;
     --primaryColor: #ffeb3b;
     --colorBrown: #5D4037;
@@ -23,6 +23,10 @@ body {
 a {
     text-decoration: none;
     cursor: pointer;
+}
+li > a:hover {
+    color: var(--darkPrimaryColor);
+    transition: all .3s;
 }
 ul {
     list-style: none;
@@ -61,6 +65,7 @@ ul {
     font-size: 2rem;
     color: var(--secondaryText);
     margin-right: 20px;
+    font-weight: bold;
 }
 .button-nav {
     width: 200px;
@@ -111,32 +116,57 @@ ul {
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 60% 40%;
     row-gap: 20px;
-    justify-content: center;
+    justify-self: center;
 }
-.section-menu {
+.container__menu--blog {
     grid-column: 1 / 2;
-    width: 100%;
-    height: 40px;
+    width: 300px;
+    height: auto;
+    justify-self: center;
+}
+.menu__blog--title{
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
 }
-.section-menu h2 {
-    font-size: 2rem;
+.menu__blog--title h2 {
+    font-size: 2.5rem;
+    color: var(--primaryText);
+    margin-right: 10px;
+}
+.menu-despegable {
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
     color: var(--primaryText);
 }
-.section-menu .menu-icon {
-    width: 30px;
-    height: 30px;
+.section-blogs a:hover {
     color: var(--darkPrimaryColor);
-    background-image: url(./img/arrow-down.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.section-menu a:hover{
-    color: var(--primaryColor);
     transition: all .3s;
 }
 .menu-temporadas {
+    display: none;
     position: absolute;
+    text-align: right;
+    width: 250px;
+}
+.container__menu--blog:hover ul, ul:hover {
+    display: block;
+    color: var(--darkPrimaryColor);
+}
+.menu-temporadas li {
+    height: 22px;
+    text-align: end;
+    margin: 10px 10px;
+}
+.menu-temporadas li a {
+    color: var(--secondaryText);
+    font-size: 2rem;
+    font-weight: 500;
+    border: solid;
+    border-color: var(--colorBlue);
+    border-radius: 5px;
+    margin: 10px 10px;
 }
