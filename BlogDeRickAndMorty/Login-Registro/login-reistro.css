@@ -28,7 +28,6 @@ a:hover {
     transition: all .3s;
 }
 body{
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,24 +35,26 @@ body{
 }
 .header {
     background-color: #757575;
-    width: 500px;
+    width: 100%;
     height: 100px;
     display: flex;
     flex-wrap: nowrap;
     align-content: center;
+    justify-content: center;
 }
 .header__img {
-    width: 25%;
+    width: 115px;
     height: 40px;
-    margin: 20px 10px;
+    margin: 20px 10px 20px 40px;
 }
 .header__title {
-    width: 75%;
+    width:300px;
     margin: 20px 10px;
     padding: 10px 0;
 }
 .header__title a {
-    font-size: 3rem;
+    font-size: 2.6rem;
+    font-weight: 700;
     color: var(--primaryColor);
     text-align: center;
 }
@@ -63,11 +64,15 @@ main {
     background-position: center;
     background-size: 100%;
     padding: 10px 0px 20px 0px;
-    width: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .login {
     padding: 0px 30px;
     min-height: calc(100vh - 200px);
+    width: 450px;
 }
 .login__container {
     background-color: rgba(255, 255, 255, 0.2);
@@ -150,10 +155,46 @@ main {
 .footer {
     display: flex;
     align-items: center;
-    width: 500px;
+    width: 100%;
     height: 100px;
     background-color: var(--colorBrown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .footer a {
     padding-left: 30px;
+}
+@media only screen and (max-width:600px) {
+    .header {
+        height: 50px;
+    }
+    .header__img {
+        width: 85px;
+        height: 25px;
+        margin: 15px 0px 0px 10px;
+        padding: 0px;
+    }
+    .header__title{
+        margin: 15px 0px;
+        padding: 0px;
+    }
+    .header a {
+        font-size: 2rem;
+        font-weight: 700;
+        padding-left: 7px;
+    }
+    main {
+        padding: 0px;
+    }
+    .login__container {
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        width: 100%;
+    }
+    .footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
