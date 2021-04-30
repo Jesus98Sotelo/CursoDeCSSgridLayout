@@ -1,0 +1,115 @@
+:root {
+    --primaryText: #6CEDC1;
+    --secondaryText: #24D3D7;
+    --backgroudContainer: #fffff0;
+    --lineBorder: #F9F871;
+    --primarycolor: #C17752;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Rajdhani', sans-serif;
+}
+body {
+    background-color: #95B0B1;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.container {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+    background-color: var(--backgroudContainer);
+    border-radius: 25px;
+}
+.container__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+}
+.container__header--logo {
+    width: 110px;
+    height: 35px;
+    margin: 0px 30px;
+    border: 3px solid var(--lineBorder);
+    border-radius: 50%;
+}
+.container__header--text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.header__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondaryText);
+    padding-left: 10px;
+}
+.header__text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--primaryText);
+    padding-left: 10px;
+}
+.container__main {
+    width: 500px;
+    height: 300px;
+}
+.container__main--image {
+    width: 500px;
+}
+.container__footer {
+    width: 500px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.container__footer--text {
+    width: auto;
+    height: auto;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--primaryText);
+    margin: 10px 10px 20px 10px;
+}
+.container__footer--container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__container--buttomLeft {
+    margin: 0px 10px;
+    display: flex;
+}
+.footer__container--buttomLeft button {
+    display: flex;
+    align-items: center;
+    border-color: var(--lineBorder);
+    border-radius: 15px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--primarycolor);
+    margin-left: 10px;
+}
+.image__buttomLeft {
+    width: 30px;
+    height: 30px;
+}
+.footer__container--buttomRight {
+
+}
+.image__buttomRight {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
